@@ -8,6 +8,8 @@ router.get("/", async(ctx) => {
 
 
     try {
+
+        console.log('ddd')
         const data = await strapi.plugin('app').service('site').index();
         await ctx.render('site/index', { data });
     } catch (err) {

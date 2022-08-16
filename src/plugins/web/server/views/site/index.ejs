@@ -336,7 +336,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 pl-0">
                                             <div class="banner-img">
-                                                <img style="width: 100px;height: 100px;" src="<%= porque.img.url %>" alt="">
+                                                <img style="width: 100px;height: 100px;" src="<%= porque.img?.url %>" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -375,7 +375,7 @@
                     <% data.membros.forEach(function(membro) { %>
                         <div>
                             <div class="">
-                                <img alt="image" src="<%= membro.foto.url %>" class="micro-img_membro">
+                                <img alt="image" src="<%= membro.foto?.url %>" class="micro-img_membro">
                                 <div class="user-details">
                                     <div class="user-name text-white">
                                         <%= membro.nome %>

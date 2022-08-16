@@ -6,13 +6,17 @@ module.exports = ({ strapi }) => ({
 
         data.area = await strapi.db.query('api::area-de-atuacao.area-de-atuacao').findMany({});
 
-        data.porque = await strapi.db.query('api::porque-escolher.porque-escolher').findMany({
+        data.porque = []
+        let a = await strapi.db.query('api::porque-escolher.porque-escolher').findMany({
             populate: {
                 img: {
                     select: ['url']
                 }
             }
         });
+
+        data.porque = a;
+        console.log(a)
 
         data.membros = await strapi.db.query('api::membro.membro').findMany({
             populate: {
@@ -22,6 +26,8 @@ module.exports = ({ strapi }) => ({
             }
         });
 
+
+
         data.parcerias = await strapi.db.query('api::parceria.parceria').findMany({
             populate: {
                 logo: {
@@ -30,7 +36,7 @@ module.exports = ({ strapi }) => ({
             }
         });
 
-        console.log(data.parcerias)
+        console.log(data, 'fff')
             // data.parcerias = []
 
 
