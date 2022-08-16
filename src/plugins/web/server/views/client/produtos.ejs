@@ -6,34 +6,36 @@
 
 <head>
 
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Cliente - Sistema Gestão</title>
     <% if(env=='PRODUT'){ %>
         <!-- General JS Scripts -->
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-        <title>Cliente - Sistema Gestão</title>
-        <!-- General CSS Files -->
-        <link rel="stylesheet" href="/assets/css/app.min.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/app.min.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/izitoast/css/iziToast.min.css">
         <!-- Template CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css">
-        <link rel="stylesheet" href="/assets/css/components.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/style.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
         <!-- Custom style CSS -->
-        <link rel="stylesheet" href="/assets/css/custom.css">
-        <link rel='shortcut icon' type='image/x-icon' href='/assets/img/favicon.ico' />
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
+        <link rel='shortcut icon' type='image/x-icon' href='https://microaitec.pt/images/favicon.png' />
+
         <% } else{ %>
-            <!-- General JS Scripts -->
-            <meta charset="UTF-8">
-            <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-            <title>Cliente - Sistema Gestão</title>
-            <!-- General CSS Files -->
-            <link rel="stylesheet" href="https://microaitec.pt/assets/css/app.min.css">
+            <link rel="stylesheet" href="/assets/css/app.min.css">
+            <link rel="stylesheet" href="/assets/bundles/bootstrap-social/bootstrap-social.css">
+            <link rel="stylesheet" href="/assets/bundles/izitoast/css/iziToast.min.css">
             <!-- Template CSS -->
-            <link rel="stylesheet" href="https://microaitec.pt/assets/css/style.css">
-            <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
+            <link rel="stylesheet" href="/assets/css/style.css">
+            <link rel="stylesheet" href="/assets/css/components.css">
             <!-- Custom style CSS -->
-            <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
-            <link rel='shortcut icon' type='image/x-icon' href='https://microaitec.pt/assets/img/favicon.ico' />
+            <link rel="stylesheet" href="/assets/css/custom.css">
+            <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
+
 
             <% } %>
+
+
 
 
 </head>
@@ -477,29 +479,31 @@
     </div>
     <% if(env=='PRODUT'){ %>
         <!-- General JS Scripts -->
-        <!-- General JS Scripts -->
         <script src="https://microaitec.pt/assets/js/app.min.js"></script>
         <!-- JS Libraies -->
         <!-- Page Specific JS File -->
-        <script src="https://microaitec.pt/assets/js/page/chat.js"></script>
         <!-- Template JS File -->
         <script src="https://microaitec.pt/assets/js/scripts.js"></script>
         <!-- Custom JS File -->
         <script src="https://microaitec.pt/assets/js/custom.js"></script>
+        <script src="https://microaitec.pt/assets/bundles/izitoast/js/iziToast.min.js"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
         <% } else{ %>
-            <!-- General JS Scripts -->
-
             <!-- General JS Scripts -->
             <script src="/assets/js/app.min.js"></script>
             <!-- JS Libraies -->
             <!-- Page Specific JS File -->
-            <script src="/assets/js/page/chat.js"></script>
             <!-- Template JS File -->
             <script src="/assets/js/scripts.js"></script>
             <!-- Custom JS File -->
             <script src="/assets/js/custom.js"></script>
-
+            <script src="/assets/bundles/izitoast/js/iziToast.min.js"></script>
+            <script src="https://unpkg.com/vue@3"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
             <% } %>
+
+
 
 
                 <script>
