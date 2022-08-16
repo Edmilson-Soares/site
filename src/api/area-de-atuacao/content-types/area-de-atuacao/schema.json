@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "area_de_atuacaos",
+  "info": {
+    "singularName": "area-de-atuacao",
+    "pluralName": "area-de-atuacaos",
+    "displayName": "Área de Atuação",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "descricao": {
+      "type": "richtext"
+    },
+    "breve_descricao": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

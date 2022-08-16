@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "membros",
+  "info": {
+    "singularName": "membro",
+    "pluralName": "membros",
+    "displayName": "Membro"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "foto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "funcao": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Otika - Admin Dashboard Template</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="/assets/bundles/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="/assets/bundles/izitoast/css/iziToast.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/css/style1.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/assets/img/favicon.ico' />
+</head>
+
+<body>
+
+    <div id="app">
+        <section class="section">
+            <div class="container mt-5">
+
+                <div class="row mt-5">
+                    <div class="mt-5 col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+
+
+                        <div class="card card-primary mt-5">
+
+                            <div class="card-header d-flex justify-content-between">
+                                <a href="/">
+                                    <img src="/images/microaitec.png" style="width: 80px;" alt="Logon de Microaitec">
+                                </a>
+
+                                <h4>Sistema Gestão</h4>
+
+                            </div>
+                            <div class="card-body">
+                                <form method="POST" action="#" class="needs-validation" novalidate="">
+                                    <div class="form-group">
+                                        <label for="nif">NIF</label>
+                                        <input id="nif" type="text" class="form-control" name="nif" tabindex="1" required autofocus>
+                                        <div class="invalid-feedback">
+                                            Preenche o seu nif
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="d-block">
+                                            <label for="password" class="control-label">Senha</label>
+                                            <div class="float-right">
+                                                <a href="auth-forgot-password.html" class="text-small">
+                                                  Forgot Password?
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                                        <div class="invalid-feedback">
+                                            please fill in your password
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button @click="login($event)" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                                          -Entrar-
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-muted text-center">
+                            Don't have an account? <a href="/auth/register">Create One</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- General JS Scripts -->
+    <script src="/assets/js/app.min.js"></script>
+    <!-- JS Libraies -->
+    <!-- Page Specific JS File -->
+    <!-- Template JS File -->
+    <script src="/assets/js/scripts.js"></script>
+    <!-- Custom JS File -->
+    <script src="/assets/js/custom.js"></script>
+    <script src="/assets/bundles/izitoast/js/iziToast.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    identifier: '',
+                    password: ""
+                }
+            },
+            methods: {
+                login(event) {
+                    event.preventDefault();
+                    axios
+                        .post('/auth/login', {
+                            identifier: this.identifier,
+                            password: this.password,
+                        })
+                        .then(({
+                            data
+                        }) => {
+                            localStorage.setItem('Microaitec-jwt', data.jwt)
+
+                            console.log(data)
+                            if (data.role == 1) {
+                                window.location.href = "/dashboard"
+                            } else if (data.role == 3) {
+                                window.location.href = "/dashboard"
+                            } else {
+                                window.location.href = "/dashboard"
+                            }
+
+                        })
+                        .catch(error => {
+                            // Handle error.
+                            //err1.innerHTML=""
+                            //window.location.href="/auth/login"
+                            console.log('An error occurred:', error.response.data.error.message);
+
+
+                            let err = error.response.data.error.message
+                            let conteiner = `
+                                <div class="alert-body" >
+                                  ${err}
+                                </div>
+
+                               `;
+
+                            iziToast.error({
+                                title: 'MicroAITec!',
+                                message: conteiner,
+                                position: 'topCenter'
+                            });
+
+
+                        });
+                }
+            },
+        }).mount('#app');
+    </script>
+</body>
+
+
+<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
+
+</html>

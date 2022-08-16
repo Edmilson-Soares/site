@@ -1,0 +1,77 @@
+.bg-micro {
+    background-color: #170B64 !important;
+    color: #fff !important;
+}
+
+.bg-micro1 {
+    background-color: #fff !important;
+}
+
+.bg-micro_p {
+    color: #fff !important;
+    background-color: #E36C4B !important;
+}
+
+.color-micro {
+    color: #E36C4B !important;
+}
+
+.active1 {
+    color: #170B64 !important;
+    background-color: #fff !important;
+}
+
+.active2 {
+    color: #000 !important;
+}
+
+.selected1 {
+    color: #170B64 !important;
+    background-color: #fff !important;
+}
+
+tr:hover {
+    color: #170B64 !important;
+    background-color: #fff !important;
+}
+
+.page-item .page-link {
+    box-shadow: none;
+    background-color: white !important;
+    color: #170B64 !important;
+}
+
+.page-item.active .page-link {
+    color: #fff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    box-shadow: none !important;
+}
+
+div>div>div>ul>li>a {
+    color: #E36C4B !important;
+}
+
+div>div>div>ul>li>a:hover active {
+    color: #E36C4B !important;
+}
+
+div>div>div>ul>li>a,
+active {
+    color: #9999 !important;
+}
+
+div>div>div>ul>li>a active {
+    color: #170B64 !important;
+}
+
+.color-micro_g {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-micro_c {
+    color: #121FCF;
+}

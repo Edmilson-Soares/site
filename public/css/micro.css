@@ -1,0 +1,30 @@
+.micro-logo_name {
+    height: 60px;
+}
+
+.micro-titulo {
+    font-size: 90px;
+    background: linear-gradient(to right, #5362EC, #ED7D31);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.micro-sub_titulo {
+    background: linear-gradient(to right, #5362EC, #ED7D31) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.micro-card {
+    background-image: linear-gradient(to right, #5362EC, #ED7D31) !important;
+}
+
+.micro-img_membro {
+    border: solid;
+    border-radius: 50%;
+    border-color: #ED7D31;
+}
+
+.micro-cor {
+    color: #ED7D31;
+}

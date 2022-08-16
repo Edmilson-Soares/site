@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- chat.html  21 Nov 2019 03:50:11 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Otika - Admin Dashboard Template</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/assets/img/favicon.ico' />
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+                <div class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li>
+                            <a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                                <i data-feather="maximize"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <form class="form-inline mr-auto">
+                                <div class="search-element">
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
+                                    <button class="btn" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle"><i data-feather="mail" class="text-white"></i>
+              <span class="badge headerBadge1">
+                6 </span> </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                            <div class="dropdown-header">
+                                Messages
+                                <div class="float-right">
+                                    <a href="#">Mark All As Read</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-message">
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
+											text-white"> <img alt="image" src="/assets/img/users/user-1.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">John
+                      Deo</span>
+                                    <span class="time messege-text">Please check your mail !!</span>
+                                    <span class="time">2 Min Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="/assets/img/users/user-2.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                      Smith</span> <span class="time messege-text">Request for leave
+                      application</span>
+                                    <span class="time">5 Min Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="/assets/img/users/user-5.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
+                      Ryan</span> <span class="time messege-text">Your payment invoice is
+                      generated.</span> <span class="time">12 Min Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="/assets/img/users/user-4.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
+                      Smith</span> <span class="time messege-text">hii John, I have upload
+                      doc
+                      related to task.</span> <span class="time">30
+                      Min Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="/assets/img/users/user-3.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
+                      Joshi</span> <span class="time messege-text">Please do as specify.
+                      Let me
+                      know if you have any query.</span> <span class="time">1
+                      Days Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="/assets/img/users/user-2.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                      Smith</span> <span class="time messege-text">Client Requirements</span>
+                                    <span class="time">2 Days Ago</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell text-white"></i>
+            </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                            <div class="dropdown-header">
+                                Notifications
+                                <div class="float-right">
+                                    <a href="#">Mark All As Read</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-icons">
+                                <a href="#" class="dropdown-item dropdown-item-unread"> <span class="dropdown-item-icon bg-primary text-white"> <i class="fas
+												fa-code"></i>
+                  </span> <span class="dropdown-item-desc"> Template update is
+                    available now! <span class="time">2 Min
+                      Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="far
+												fa-user"></i>
+                  </span> <span class="dropdown-item-desc"> <b>You</b> and <b>Dedik
+                      Sugiharto</b> are now friends <span class="time">10 Hours
+                      Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-success text-white"> <i
+                      class="fas
+												fa-check"></i>
+                  </span> <span class="dropdown-item-desc"> <b>Kusnaedi</b> has
+                    moved task <b>Fix bug header</b> to <b>Done</b> <span class="time">12
+                      Hours
+                      Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-danger text-white"> <i
+                      class="fas fa-exclamation-triangle"></i>
+                  </span> <span class="dropdown-item-desc"> Low disk space. Let's
+                    clean it! <span class="time">17 Hours Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
+												fa-bell"></i>
+                  </span> <span class="dropdown-item-desc"> Welcome to Otika
+                    template! <span class="time">Yesterday</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="/assets/img/user.png" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right pullDown">
+                            <div class="dropdown-title">Hello Sarah Smith</div>
+                            <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+										fa-user"></i> Profile
+                            </a>
+                            <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i> Activities
+                            </a>
+                            <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i> Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="/"> <img alt="image" src="/images/favicon.png" class="header-logo" /> <span class="logo-name">Otika</span>
+                        </a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Main</li>
+                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Painel de Controlo">
+                            <a href="/cliente" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+                        </li>
+                        <li class="dropdown  active" data-toggle="tooltip" data-placement="left" title="Produtos">
+                            <a href="/cliente/produtos" class="nav-link"><i data-feather="archive"></i><span>Produtos</span></a>
+                        </li>
+
+                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Pedidos">
+                            <a href="/cliente/pedidos" class="nav-link"><i data-feather="shopping-cart"></i><span>Pedidos</span></a>
+                        </li>
+
+                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Faturas">
+                            <a href="/cliente/faturas" class="nav-link"><i data-feather="credit-card"></i><span>Faturas</span></a>
+                        </li>
+
+                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Serviços">
+                            <a href="/cliente/servicos" class="nav-link"><i data-feather="grid"></i><span>Serviços</span></a>
+                        </li>
+
+                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Perfil">
+                            <a href="/cliente/perfil" class="nav-link"><i data-feather="user"></i><span>Perfil</span></a>
+                        </li>
+
+
+
+                    </ul>
+                </aside>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content" style="margin-top: -30px;">
+                <section class="section">
+                    <div class="section-body">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="card sidebar-style-22">
+                                    <div class="body">
+                                        <div id="plist" class="people-list">
+                                            <div class="chat-search">
+                                                <input type="text" class="form-control" placeholder="Search..." />
+                                            </div>
+                                            <div class="m-b-20">
+                                                <div id="chat-scroll">
+                                                    <ul class="chat-list list-unstyled m-b-0">
+                                                        <li class="clearfix active">
+                                                            <img src="/assets/img/users/user-4.png" alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">William Smith</div>
+                                                                <div class="status">
+                                                                    <i class="material-icons offline">fiber_manual_record</i> left 7 mins ago </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="clearfix ">
+                                                            <img src="/assets/img/users/user-1.png" alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">Martha Williams</div>
+                                                                <div class="status">
+                                                                    <i class="material-icons offline">fiber_manual_record</i> online </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <img src="/assets/img/users/user-2.png" alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">Joseph Clark</div>
+                                                                <div class="status">
+                                                                    <i class="material-icons online">fiber_manual_record</i> online </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <img src="/assets/img/users/user-3.png" alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">Nancy Taylor</div>
+                                                                <div class="status">
+                                                                    <i class="material-icons online">fiber_manual_record</i> online </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <img src="/assets/img/users/user-4.png" alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">Margaret Wilson</div>
+                                                                <div class="status">
+                                                                    <i class="material-icons online">fiber_manual_record</i> online </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <img src="/assets/img/users/user-5.png" alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">Joseph Jones</div>
+                                                                <div class="status">
+                                                                    <i class="material-icons offline">fiber_manual_record</i> left 30 mins ago </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <img src="/assets/img/users/user-1.png" alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">Jane Brown</div>
+                                                                <div class="status">
+                                                                    <i class="material-icons offline">fiber_manual_record</i> left 10 hours ago </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <img src="/assets/img/users/user-2.png" alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">Eliza Johnson</div>
+                                                                <div class="status">
+                                                                    <i class="material-icons online">fiber_manual_record</i> online </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-10 pl--5">
+                                <div class="card">
+                                    <div class="padding-20">
+                                        <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                                            <li class="nav-item">
+                                                <a style="color: #0f0;" class="nav-link active text-green" id="home-tab2" data-toggle="tab" href="#about" role="tab" aria-selected="true">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a style="color: #0f0;" class="nav-link text-green" id="profile-tab2" data-toggle="tab" href="#settings" role="tab" aria-selected="false">Setting</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a style="color: #0f0;" class="nav-link text-green" id="profile-tab2" data-toggle="tab" href="#events" role="tab" aria-selected="false">eventos</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content tab-bordered" id="myTab3Content">
+                                            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="home-tab2">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-6 b-r">
+                                                        <strong>Full Name</strong>
+                                                        <br>
+                                                        <p class="text-muted">Emily Smith</p>
+                                                    </div>
+                                                    <div class="col-md-3 col-6 b-r">
+                                                        <strong>Mobile</strong>
+                                                        <br>
+                                                        <p class="text-muted">(123) 456 7890</p>
+                                                    </div>
+                                                    <div class="col-md-3 col-6 b-r">
+                                                        <strong>Email</strong>
+                                                        <br>
+                                                        <p class="text-muted">johndeo@example.com</p>
+                                                    </div>
+                                                    <div class="col-md-3 col-6">
+                                                        <strong>Location</strong>
+                                                        <br>
+                                                        <p class="text-muted">India</p>
+                                                    </div>
+                                                </div>
+                                                <p class="m-t-30">Completed my graduation in Arts from the well known and renowned institution of India – SARDAR PATEL ARTS COLLEGE, BARODA in 2000-01, which was affiliated to M.S. University. I ranker in University exams
+                                                    from the same university from 1996-01.</p>
+                                                <p>Worked as Professor and Head of the department at Sarda Collage, Rajkot, Gujarat from 2003-2015 </p>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+                                            </div>
+                                            <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="profile-tab2">
+                                                <form method="post" class="needs-validation">
+                                                    <div class="card-header">
+                                                        <h4>Edit Profile</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="form-group col-md-6 col-12">
+                                                                <label>First Name</label>
+                                                                <input type="text" class="form-control" value="John">
+                                                                <div class="invalid-feedback">
+                                                                    Please fill in the first name
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group col-md-6 col-12">
+                                                                <label>Last Name</label>
+                                                                <input type="text" class="form-control" value="Deo">
+                                                                <div class="invalid-feedback">
+                                                                    Please fill in the last name
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="form-group col-md-7 col-12">
+                                                                <label>Email</label>
+                                                                <input type="email" class="form-control" value="test@example.com">
+                                                                <div class="invalid-feedback">
+                                                                    Please fill in the email
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group col-md-5 col-12">
+                                                                <label>Phone</label>
+                                                                <input type="tel" class="form-control" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="form-group col-12">
+                                                                <label>Bio</label>
+                                                                <textarea class="form-control summernote-simple">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptatum alias molestias minus quod dignissimos.</textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="form-group mb-0 col-12">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" name="remember" class="custom-control-input" id="newsletter">
+                                                                    <label class="custom-control-label" for="newsletter">Subscribe to newsletter</label>
+                                                                    <div class="text-muted form-text">
+                                                                        You will get new information about products, offers and promotions
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer text-right">
+                                                        <button class="btn btn-primary">Save Changes</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="profile-tab2">
+                                                <div id="myEvent1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- General JS Scripts -->
+    <script src="/assets/js/app.min.js"></script>
+    <!-- JS Libraies -->
+    <!-- Page Specific JS File -->
+    <script src="/assets/js/page/chat.js"></script>
+    <!-- Template JS File -->
+    <script src="/assets/js/scripts.js"></script>
+    <!-- Custom JS File -->
+    <script src="/assets/js/custom.js"></script>
+    <script>
+        jQuery("body").addClass("bg-white");
+    </script>
+</body>
+
+
+<!-- chat.html  21 Nov 2019 03:50:12 GMT -->
+
+</html>
