@@ -691,9 +691,23 @@ $(function() {
 
     //start up class add
 
-    //add default class on body tag
-    jQuery("body").addClass("dark");
+    /*//add default class on body tag
+    jQuery("body").addClass("light");
+    jQuery("body").addClass("light-sidebar");
+    jQuery("body").addClass("theme-white");
+    // set theme default color
+    $(".choose-theme li").removeClass("active");
+    $(".choose-theme li[title|='white']").addClass("active");
+    //set default dark or light layout(1=light, 2=dark)
+    $(".select-layout[value|='1']").prop("checked", true);
+    //set default dark or light sidebar(1=light, 2=dark)
+    $(".select-sidebar[value|='1']").prop("checked", true);
+    // sticky header default set to true
+    $("#sticky_header_setting").prop("checked", true);
 
+    */
+
+    jQuery("body").addClass("dark");
     jQuery("body").addClass("dark-sidebar");
     jQuery("body").addClass("theme-dark");
     // set theme default color
@@ -706,5 +720,6 @@ $(function() {
     // sticky header default set to true
     $("#sticky_header_setting").prop("checked", false);
 
+    $("body").addClass("dark dark-sidebar theme-dark theme-black");
 
 });

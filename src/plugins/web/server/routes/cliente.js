@@ -33,7 +33,7 @@ router.get("/pedidos", async(ctx) => {
 
     try {
         const data = await strapi.plugin('app').service('site').index();
-        await ctx.render('client/index', { data, env: process.env.APP_ENV });
+        await ctx.render('client/pedidos', { data, env: process.env.APP_ENV });
     } catch (err) {
         ctx.body = err;
     }
@@ -44,7 +44,7 @@ router.get("/faturas", async(ctx) => {
 
     try {
         const data = await strapi.plugin('app').service('site').index();
-        await ctx.render('client/index', { data, env: process.env.APP_ENV });
+        await ctx.render('client/faturas', { data, env: process.env.APP_ENV });
     } catch (err) {
         ctx.body = err;
     }
@@ -55,7 +55,7 @@ router.get("/servicos", async(ctx) => {
 
     try {
         const data = await strapi.plugin('app').service('site').index();
-        await ctx.render('client/index', { data, env: process.env.APP_ENV });
+        await ctx.render('client/servicos', { data, env: process.env.APP_ENV });
     } catch (err) {
         ctx.body = err;
     }
@@ -67,7 +67,7 @@ router.get("/perfil", async(ctx) => {
 
     try {
         const data = await strapi.plugin('app').service('site').index();
-        await ctx.render('client/index', { data, env: process.env.APP_ENV });
+        await ctx.render('client/perfil', { data, env: process.env.APP_ENV });
     } catch (err) {
         ctx.body = err;
     }

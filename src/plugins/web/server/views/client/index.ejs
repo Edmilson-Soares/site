@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
         <!-- Custom style CSS -->
         <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
+        <link rel="stylesheet" type="text/css" href="https://microaitec.pt/css/micro.css" />
         <link rel='shortcut icon' type='image/x-icon' href='https://microaitec.pt/images/favicon.png' />
 
         <% } else{ %>
@@ -29,6 +30,7 @@
             <link rel="stylesheet" href="/assets/css/components.css">
             <!-- Custom style CSS -->
             <link rel="stylesheet" href="/assets/css/custom.css">
+            <link rel="stylesheet" type="text/css" href="/css/micro.css" />
             <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
 
 
@@ -36,17 +38,21 @@
 
 </head>
 
-<body>
+<body class="dark dark-sidebar theme-dark theme-black">
 
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
-            <div class="navbar-bg"></div>
             <nav class="navbar navbar-expand-lg main-navbar sticky">
                 <div class="form-inline mr-auto">
                     <ul class="navbar-nav mr-3">
                         <li>
+                            <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg collapse-btn">
+                                <i data-feather="align-justify" class="text-white"></i>
+                            </a>
+                        </li>
+                        <li>
                             <a href="#" class="nav-link nav-link-lg fullscreen-btn">
-                                <i data-feather="maximize"></i>
+                                <i data-feather="maximize" class="text-white"></i>
                             </a>
                         </li>
                         <li>
@@ -61,140 +67,279 @@
                         </li>
                     </ul>
                 </div>
-                <ul class="navbar-nav navbar-right">
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle"><i data-feather="mail" class="text-white"></i>
+
+                <% if(env=='PRODUT'){ %>
+                    <!-- General JS Scripts -->
+                    <ul class="navbar-nav navbar-right">
+                        <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle"><i data-feather="mail" class="text-white"></i>
               <span class="badge headerBadge1">
                 6 </span> </a>
-                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
-                            <div class="dropdown-header">
-                                Messages
-                                <div class="float-right">
-                                    <a href="#">Mark All As Read</a>
+                            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                                <div class="dropdown-header">
+                                    Messages
+                                    <div class="float-right">
+                                        <a href="#">Mark All As Read</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown-list-content dropdown-list-message">
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
+                                <div class="dropdown-list-content dropdown-list-message">
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
 											text-white"> <img alt="image" src="https://microaitec.pt/assets/img/users/user-1.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">John
                       Deo</span>
-                                    <span class="time messege-text">Please check your mail !!</span>
-                                    <span class="time">2 Min Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                                        <span class="time messege-text">Please check your mail !!</span>
+                                        <span class="time">2 Min Ago</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
                     <img alt="image" src="https://microaitec.pt/assets/img/users/user-2.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
                       Smith</span> <span class="time messege-text">Request for leave
                       application</span>
-                                    <span class="time">5 Min Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                                        <span class="time">5 Min Ago</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
                     <img alt="image" src="https://microaitec.pt/assets/img/users/user-5.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
                       Ryan</span> <span class="time messege-text">Your payment invoice is
                       generated.</span> <span class="time">12 Min Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
                     <img alt="image" src="https://microaitec.pt/assets/img/users/user-4.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
                       Smith</span> <span class="time messege-text">hii John, I have upload
                       doc
                       related to task.</span> <span class="time">30
                       Min Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
                     <img alt="image" src="https://microaitec.pt/assets/img/users/user-3.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
                       Joshi</span> <span class="time messege-text">Please do as specify.
                       Let me
                       know if you have any query.</span> <span class="time">1
                       Days Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
                     <img alt="image" src="https://microaitec.pt/assets/img/users/user-2.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
                       Smith</span> <span class="time messege-text">Client Requirements</span>
-                                    <span class="time">2 Days Ago</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="dropdown-footer text-center">
-                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell text-white"></i>
-            </a>
-                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
-                            <div class="dropdown-header">
-                                Notifications
-                                <div class="float-right">
-                                    <a href="#">Mark All As Read</a>
+                                        <span class="time">2 Days Ago</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-footer text-center">
+                                    <a href="#">View All <i class="fas fa-chevron-right"></i></a>
                                 </div>
                             </div>
-                            <div class="dropdown-list-content dropdown-list-icons">
-                                <a href="#" class="dropdown-item dropdown-item-unread"> <span class="dropdown-item-icon bg-primary text-white"> <i class="fas
+                        </li>
+                        <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell text-white"></i>
+            </a>
+                            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                                <div class="dropdown-header">
+                                    Notifications
+                                    <div class="float-right">
+                                        <a href="#">Mark All As Read</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list-content dropdown-list-icons">
+                                    <a href="#" class="dropdown-item dropdown-item-unread"> <span class="dropdown-item-icon bg-primary text-white"> <i class="fas
 												fa-code"></i>
                   </span> <span class="dropdown-item-desc"> Template update is
                     available now! <span class="time">2 Min
                       Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="far
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="far
 												fa-user"></i>
                   </span> <span class="dropdown-item-desc"> <b>You</b> and <b>Dedik
                       Sugiharto</b> are now friends <span class="time">10 Hours
                       Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-success text-white"> <i
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-success text-white"> <i
                       class="fas
 												fa-check"></i>
                   </span> <span class="dropdown-item-desc"> <b>Kusnaedi</b> has
                     moved task <b>Fix bug header</b> to <b>Done</b> <span class="time">12
                       Hours
                       Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-danger text-white"> <i
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-danger text-white"> <i
                       class="fas fa-exclamation-triangle"></i>
                   </span> <span class="dropdown-item-desc"> Low disk space. Let's
                     clean it! <span class="time">17 Hours Ago</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
 												fa-bell"></i>
                   </span> <span class="dropdown-item-desc"> Welcome to Otika
                     template! <span class="time">Yesterday</span>
-                                    </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-footer text-center">
+                                    <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="https://microaitec.pt/assets/img/user.png" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pullDown">
+                                <div class="dropdown-title micro-sub_titulo">Hello Sarah Smith</div>
+                                <a href="profile.html" class="dropdown-item has-icon"> <i class="far fa-user"></i> Profile
+                                </a>
+                                <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i> Activities
+                                </a>
+                                <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i> Settings
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i> Logout
                                 </a>
                             </div>
-                            <div class="dropdown-footer text-center">
-                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="https://microaitec.pt/assets/img/user.png" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
-                        <div class="dropdown-menu dropdown-menu-right pullDown">
-                            <div class="dropdown-title">Hello Sarah Smith</div>
-                            <a href="profile.html" class="dropdown-item has-icon"> <i class="far
-										fa-user"></i> Profile
-                            </a>
-                            <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i> Activities
-                            </a>
-                            <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i> Settings
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i> Logout
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                    <% } else{ %>
+                        <!-- General JS Scripts -->
+                        <ul class="navbar-nav navbar-right">
+                            <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle"><i data-feather="mail" class="text-white"></i>
+                  <span class="badge headerBadge1">
+                    6 </span> </a>
+                                <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                                    <div class="dropdown-header">
+                                        Messages
+                                        <div class="float-right">
+                                            <a href="#">Mark All As Read</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-list-content dropdown-list-message">
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
+                          text-white"> <img alt="image" src="https://microaitec.pt/assets/img/users/user-1.png" class="rounded-circle">
+                      </span> <span class="dropdown-item-desc"> <span class="message-user">John
+                          Deo</span>
+                                            <span class="time messege-text">Please check your mail !!</span>
+                                            <span class="time">2 Min Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                        <img alt="image" src="https://microaitec.pt/assets/img/users/user-2.png" class="rounded-circle">
+                      </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                          Smith</span> <span class="time messege-text">Request for leave
+                          application</span>
+                                            <span class="time">5 Min Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                        <img alt="image" src="https://microaitec.pt/assets/img/users/user-5.png" class="rounded-circle">
+                      </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
+                          Ryan</span> <span class="time messege-text">Your payment invoice is
+                          generated.</span> <span class="time">12 Min Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                        <img alt="image" src="https://microaitec.pt/assets/img/users/user-4.png" class="rounded-circle">
+                      </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
+                          Smith</span> <span class="time messege-text">hii John, I have upload
+                          doc
+                          related to task.</span> <span class="time">30
+                          Min Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                        <img alt="image" src="https://microaitec.pt/assets/img/users/user-3.png" class="rounded-circle">
+                      </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
+                          Joshi</span> <span class="time messege-text">Please do as specify.
+                          Let me
+                          know if you have any query.</span> <span class="time">1
+                          Days Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                        <img alt="image" src="https://microaitec.pt/assets/img/users/user-2.png" class="rounded-circle">
+                      </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                          Smith</span> <span class="time messege-text">Client Requirements</span>
+                                            <span class="time">2 Days Ago</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-footer text-center">
+                                        <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell text-white"></i>
+                </a>
+                                <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                                    <div class="dropdown-header">
+                                        Notifications
+                                        <div class="float-right">
+                                            <a href="#">Mark All As Read</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-list-content dropdown-list-icons">
+                                        <a href="#" class="dropdown-item dropdown-item-unread"> <span class="dropdown-item-icon bg-primary text-white"> <i class="fas
+                            fa-code"></i>
+                      </span> <span class="dropdown-item-desc"> Template update is
+                        available now! <span class="time">2 Min
+                          Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="far
+                            fa-user"></i>
+                      </span> <span class="dropdown-item-desc"> <b>You</b> and <b>Dedik
+                          Sugiharto</b> are now friends <span class="time">10 Hours
+                          Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-success text-white"> <i
+                          class="fas
+                            fa-check"></i>
+                      </span> <span class="dropdown-item-desc"> <b>Kusnaedi</b> has
+                        moved task <b>Fix bug header</b> to <b>Done</b> <span class="time">12
+                          Hours
+                          Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-danger text-white"> <i
+                          class="fas fa-exclamation-triangle"></i>
+                      </span> <span class="dropdown-item-desc"> Low disk space. Let's
+                        clean it! <span class="time">17 Hours Ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
+                            fa-bell"></i>
+                      </span> <span class="dropdown-item-desc"> Welcome to Otika
+                        template! <span class="time">Yesterday</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-footer text-center">
+                                        <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="https://microaitec.pt/assets/img/user.png" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+                                <div class="dropdown-menu dropdown-menu-right pullDown text-white">
+                                    <div class="dropdown-title micro-sub_titulo">ffHello Sarah Smith</div>
+                                    <a href="profile.html" class="dropdown-item has-icon"> <i class="far fa-user"></i> Profile
+                                    </a>
+                                    <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i> Activities
+                                    </a>
+                                    <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i> Settings
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i> Logout
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <% } %>
+
             </nav>
             <div class="main-sidebar sidebar-style-2">
 
@@ -202,11 +347,11 @@
                     <!-- General JS Scripts -->
                     <aside id="sidebar-wrapper">
                         <div class="sidebar-brand">
-                            <a href="https://microaitec.pt"> <img alt="image" src="https://microaitec.pt/images/favicon.png" class="header-logo" /> <span class="logo-name">Otika</span>
+                            <a href="https://microaitec.pt"> <img alt="image" src="https://microaitec.pt/images/favicon.png" class="header-logo" /> <span class="logo-name">MicroAITec</span>
                             </a>
                         </div>
                         <ul class="sidebar-menu">
-                            <li class="menu-header">Main</li>
+                            <li class="menu-header">Sistema de Gestão</li>
                             <li class="dropdown active" data-toggle="tooltip" data-placement="left" title="Painel de Controlo">
                                 <a href="/" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
                             </li>
@@ -235,11 +380,11 @@
                         <!-- General JS Scripts -->
                         <aside id="sidebar-wrapper">
                             <div class="sidebar-brand">
-                                <a href="/"> <img alt="image" src="/images/favicon.png" class="header-logo" /> <span class="logo-name">Otika</span>
+                                <a href="/"> <img alt="image" src="/images/favicon.png" class="header-logo" /> <span class="logo-name micro-sub_titulo">MicroAITec</span>
                                 </a>
                             </div>
                             <ul class="sidebar-menu">
-                                <li class="menu-header">Main</li>
+                                <li class="menu-header">Sistema de Gestão</li>
                                 <li class="dropdown active" data-toggle="tooltip" data-placement="left" title="Painel de Controlo">
                                     <a href="/cliente" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
                                 </li>
@@ -279,7 +424,7 @@
                                         <div class="row ">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                 <div class="card-content">
-                                                    <h5 class="font-15">New Booking</h5>
+                                                    <h5 class="font-15 micro-sub_titulo">New Booking</h5>
                                                     <h2 class="mb-3 font-18">258</h2>
                                                     <p class="mb-0"><span class="col-green">10%</span> Increase</p>
                                                 </div>
@@ -301,7 +446,7 @@
                                         <div class="row ">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                 <div class="card-content">
-                                                    <h5 class="font-15"> Customers</h5>
+                                                    <h5 class="font-15 micro-sub_titulo"> Customers</h5>
                                                     <h2 class="mb-3 font-18">1,287</h2>
                                                     <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
                                                 </div>
@@ -323,7 +468,7 @@
                                         <div class="row ">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                 <div class="card-content">
-                                                    <h5 class="font-15">New Project</h5>
+                                                    <h5 class="font-15 micro-sub_titulo">New Project</h5>
                                                     <h2 class="mb-3 font-18">128</h2>
                                                     <p class="mb-0"><span class="col-green">18%</span> Increase
                                                     </p>
@@ -346,7 +491,7 @@
                                         <div class="row ">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                 <div class="card-content">
-                                                    <h5 class="font-15">Revenue</h5>
+                                                    <h5 class="font-15 micro-sub_titulo">Revenue</h5>
                                                     <h2 class="mb-3 font-18">$48,697</h2>
                                                     <p class="mb-0"><span class="col-green">42%</span> Increase</p>
                                                 </div>
@@ -368,7 +513,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Assign Task Table</h4>
+                                    <h4 class="micro-sub_titulo">Assign Task Table</h4>
                                     <div class="card-header-form">
                                         <form>
                                             <div class="input-group">
