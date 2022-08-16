@@ -21,6 +21,7 @@
         "koa-router": "^10.1.1",
         "mqtt": "^4.3.4",
         "nodemailer": "^6.7.2",
+        "pg": "^8.7.3",
         "socket.io": "^4.4.1",
         "strapi-plugin-entity-relationship-chart": "^4.1.0"
     },
