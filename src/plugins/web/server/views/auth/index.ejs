@@ -5,19 +5,39 @@
 <!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Otika - Admin Dashboard Template</title>
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="https://microaitec.pt/assets/css/app.min.css">
-    <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/izitoast/css/iziToast.min.css">
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="https://microaitec.pt/assets/css/style1.css">
-    <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
-    <!-- Custom style CSS -->
-    <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
-    <link rel='shortcut icon' type='image/x-icon' href='https://microaitec.pt/assets/img/favicon.ico' />
+
+
+    <% if(env=='PRODUT'){ %>
+        <!-- General JS Scripts -->
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+        <title>Auth - Sistema</title>
+        <!-- General CSS Files -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/app.min.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/izitoast/css/iziToast.min.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/style1.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
+        <!-- Custom style CSS -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
+        <link rel='shortcut icon' type='image/x-icon' href='https://microaitec.pt/assets/img/favicon.ico' />
+        <% } else{ %>
+            <meta charset="UTF-8">
+            <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+            <title>Otika - Admin Dashboard Template</title>
+            <!-- General CSS Files -->
+            <link rel="stylesheet" href="https://microaitec.pt/assets/css/app.min.css">
+            <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/bootstrap-social/bootstrap-social.css">
+            <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/izitoast/css/iziToast.min.css">
+            <!-- Template CSS -->
+            <link rel="stylesheet" href="https://microaitec.pt/assets/css/style1.css">
+            <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
+            <!-- Custom style CSS -->
+            <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
+            <link rel='shortcut icon' type='image/x-icon' href='https://microaitec.pt/assets/img/favicon.ico' />
+            <% } %>
+
 </head>
 
 <body>
@@ -33,11 +53,26 @@
                         <div class="card card-primary mt-5">
 
                             <div class="card-header d-flex justify-content-between">
-                                <a href="/">
-                                    <img src="/images/microaitec.png" style="width: 80px;" alt="Logon de Microaitec">
-                                </a>
 
-                                <h4>Sistema Gestão</h4>
+
+                                <% if(env=='PRODUT'){ %>
+                                    <!-- General JS Scripts -->
+                                    <a href="https://microaitec.pt/">
+                                        <img src="https://microaitec.pt/images/microaitec.png" style="width: 80px;" alt="Logon de Microaitec">
+                                    </a>
+
+                                    <% } else{ %>
+                                        <!-- General JS Scripts -->
+                                        <a href="/">
+                                            <img src="/images/microaitec.png" style="width: 80px;" alt="Logon de Microaitec">
+                                        </a>
+
+
+                                        <% } %>
+
+
+
+                                            <h4>Sistema Gestão</h4>
 
                             </div>
                             <div class="card-body">
@@ -80,77 +115,97 @@
             </div>
         </section>
     </div>
-    <!-- General JS Scripts -->
-    <script src="https://microaitec.pt/assets/js/app.min.js"></script>
-    <!-- JS Libraies -->
-    <!-- Page Specific JS File -->
-    <!-- Template JS File -->
-    <script src="https://microaitec.pt/assets/js/scripts.js"></script>
-    <!-- Custom JS File -->
-    <script src="https://microaitec.pt/assets/js/custom.js"></script>
-    <script src="https://microaitec.pt/assets/bundles/izitoast/js/iziToast.min.js"></script>
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 
 
-    <script>
-        Vue.createApp({
-            data() {
-                return {
-                    identifier: '',
-                    password: ""
-                }
-            },
-            methods: {
-                login(event) {
-                    event.preventDefault();
-                    axios
-                        .post('/auth/login', {
-                            identifier: this.identifier,
-                            password: this.password,
-                        })
-                        .then(({
-                            data
-                        }) => {
-                            localStorage.setItem('Microaitec-jwt', data.jwt)
+    <% if(env=='PRODUT'){ %>
+        <!-- General JS Scripts -->
+        <script src="https://microaitec.pt/assets/js/app.min.js"></script>
+        <!-- JS Libraies -->
+        <!-- Page Specific JS File -->
+        <!-- Template JS File -->
+        <script src="https://microaitec.pt/assets/js/scripts.js"></script>
+        <!-- Custom JS File -->
+        <script src="https://microaitec.pt/assets/js/custom.js"></script>
+        <script src="https://microaitec.pt/assets/bundles/izitoast/js/iziToast.min.js"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+        <% } else{ %>
+            <!-- General JS Scripts -->
+            <script src="/assets/js/app.min.js"></script>
+            <!-- JS Libraies -->
+            <!-- Page Specific JS File -->
+            <!-- Template JS File -->
+            <script src="/assets/js/scripts.js"></script>
+            <!-- Custom JS File -->
+            <script src="/assets/js/custom.js"></script>
+            <script src="/assets/bundles/izitoast/js/iziToast.min.js"></script>
+            <script src="https://unpkg.com/vue@3"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+            <% } %>
 
-                            console.log(data)
-                            if (data.role == 1) {
-                                window.location.href = "/dashboard"
-                            } else if (data.role == 3) {
-                                window.location.href = "/dashboard"
-                            } else {
-                                window.location.href = "/dashboard"
+
+
+                <script>
+                    let env = '<%= env%>'
+
+
+                    Vue.createApp({
+                        data() {
+                            return {
+                                identifier: '',
+                                password: ""
                             }
+                        },
+                        methods: {
+                            login(event) {
+                                event.preventDefault();
+                                axios
+                                    .post('/auth/login', {
+                                        identifier: this.identifier,
+                                        password: this.password,
+                                    })
+                                    .then(({
+                                        data
+                                    }) => {
+                                        localStorage.setItem('Microaitec-jwt', data.jwt)
 
-                        })
-                        .catch(error => {
-                            // Handle error.
-                            //err1.innerHTML=""
-                            //window.location.href="/auth/login"
-                            console.log('An error occurred:', error.response.data.error.message);
+                                        console.log(data)
+                                        if (data.role == 1) {
+                                            window.location.href = "/dashboard"
+                                        } else if (data.role == 3) {
+                                            window.location.href = "/dashboard"
+                                        } else {
+                                            window.location.href = "/dashboard"
+                                        }
+
+                                    })
+                                    .catch(error => {
+                                        // Handle error.
+                                        //err1.innerHTML=""
+                                        //window.location.href="/auth/login"
+                                        console.log('An error occurred:', error.response.data.error.message);
 
 
-                            let err = error.response.data.error.message
-                            let conteiner = `
+                                        let err = error.response.data.error.message
+                                        let conteiner = `
                                 <div class="alert-body" >
                                   ${err}
                                 </div>
 
                                `;
 
-                            iziToast.error({
-                                title: 'MicroAITec!',
-                                message: conteiner,
-                                position: 'topCenter'
-                            });
+                                        iziToast.error({
+                                            title: 'MicroAITec!',
+                                            message: conteiner,
+                                            position: 'topCenter'
+                                        });
 
 
-                        });
-                }
-            },
-        }).mount('#app');
-    </script>
+                                    });
+                            }
+                        },
+                    }).mount('#app');
+                </script>
 </body>
 
 

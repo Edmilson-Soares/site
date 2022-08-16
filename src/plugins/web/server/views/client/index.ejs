@@ -5,17 +5,36 @@
 <!-- index.html  21 Nov 2019 03:44:50 GMT -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Sistema de Gestão</title>
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="https://microaitec.pt/assets/css/app.min.css">
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="https://microaitec.pt/assets/css/style.css">
-    <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
-    <!-- Custom style CSS -->
-    <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
-    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
+
+    <% if(env=='PRODUT'){ %>
+        <!-- General JS Scripts -->
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+        <title>Sistema de Gestão</title>
+        <!-- General CSS Files -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/app.min.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/style.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
+        <!-- Custom style CSS -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
+        <link rel='shortcut icon' type='image/x-icon' href='https://microaitec.pt/images/favicon.png' />
+
+        <% } else{ %>
+
+            <meta charset="UTF-8">
+            <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+            <title>Sistema de Gestão</title>
+            <!-- General CSS Files -->
+            <link rel="stylesheet" href="/assets/css/app.min.css">
+            <!-- Template CSS -->
+            <link rel="stylesheet" href="/assets/css/style.css">
+            <link rel="stylesheet" href="/assets/css/components.css">
+            <!-- Custom style CSS -->
+            <link rel="stylesheet" href="/assets/css/custom.css">
+            <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
+            <% } %>
+
 </head>
 
 <body>
@@ -179,40 +198,76 @@
                 </ul>
             </nav>
             <div class="main-sidebar sidebar-style-2">
-                <aside id="sidebar-wrapper">
-                    <div class="sidebar-brand">
-                        <a href="/"> <img alt="image" src="/images/favicon.png" class="header-logo" /> <span class="logo-name">Otika</span>
-                        </a>
-                    </div>
-                    <ul class="sidebar-menu">
-                        <li class="menu-header">Main</li>
-                        <li class="dropdown active" data-toggle="tooltip" data-placement="left" title="Painel de Controlo">
-                            <a href="/cliente" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
-                        </li>
-                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Produtos">
-                            <a href="/cliente/produtos" class="nav-link"><i data-feather="archive"></i><span>Produtos</span></a>
-                        </li>
 
-                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Pedidos">
-                            <a href="/cliente/pedidos" class="nav-link"><i data-feather="shopping-cart"></i><span>Pedidos</span></a>
-                        </li>
+                <% if(env=='PRODUT'){ %>
+                    <!-- General JS Scripts -->
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a href="https://microaitec.pt"> <img alt="image" src="https://microaitec.pt/images/favicon.png" class="header-logo" /> <span class="logo-name">Otika</span>
+                            </a>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li class="menu-header">Main</li>
+                            <li class="dropdown active" data-toggle="tooltip" data-placement="left" title="Painel de Controlo">
+                                <a href="/" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+                            </li>
+                            <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Produtos">
+                                <a href="/produtos" class="nav-link"><i data-feather="archive"></i><span>Produtos</span></a>
+                            </li>
 
-                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Faturas">
-                            <a href="/cliente/faturas" class="nav-link"><i data-feather="credit-card"></i><span>Faturas</span></a>
-                        </li>
+                            <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Pedidos">
+                                <a href="/pedidos" class="nav-link"><i data-feather="shopping-cart"></i><span>Pedidos</span></a>
+                            </li>
 
-                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Serviços">
-                            <a href="/cliente/servicos" class="nav-link"><i data-feather="grid"></i><span>Serviços</span></a>
-                        </li>
+                            <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Faturas">
+                                <a href="/faturas" class="nav-link"><i data-feather="credit-card"></i><span>Faturas</span></a>
+                            </li>
 
-                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Perfil">
-                            <a href="/cliente/perfil" class="nav-link"><i data-feather="user"></i><span>Perfil</span></a>
-                        </li>
+                            <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Serviços">
+                                <a href="/servicos" class="nav-link"><i data-feather="grid"></i><span>Serviços</span></a>
+                            </li>
 
+                            <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Perfil">
+                                <a href="/perfil" class="nav-link"><i data-feather="user"></i><span>Perfil</span></a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <% } else{ %>
+                        <!-- General JS Scripts -->
+                        <aside id="sidebar-wrapper">
+                            <div class="sidebar-brand">
+                                <a href="/"> <img alt="image" src="/images/favicon.png" class="header-logo" /> <span class="logo-name">Otika</span>
+                                </a>
+                            </div>
+                            <ul class="sidebar-menu">
+                                <li class="menu-header">Main</li>
+                                <li class="dropdown active" data-toggle="tooltip" data-placement="left" title="Painel de Controlo">
+                                    <a href="/cliente" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+                                </li>
+                                <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Produtos">
+                                    <a href="/cliente/produtos" class="nav-link"><i data-feather="archive"></i><span>Produtos</span></a>
+                                </li>
 
+                                <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Pedidos">
+                                    <a href="/cliente/pedidos" class="nav-link"><i data-feather="shopping-cart"></i><span>Pedidos</span></a>
+                                </li>
 
-                    </ul>
-                </aside>
+                                <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Faturas">
+                                    <a href="/cliente/faturas" class="nav-link"><i data-feather="credit-card"></i><span>Faturas</span></a>
+                                </li>
+
+                                <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Serviços">
+                                    <a href="/cliente/servicos" class="nav-link"><i data-feather="grid"></i><span>Serviços</span></a>
+                                </li>
+
+                                <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Perfil">
+                                    <a href="/cliente/perfil" class="nav-link"><i data-feather="user"></i><span>Perfil</span></a>
+                                </li>
+                            </ul>
+                        </aside>
+
+                        <% } %>
+
             </div>
             <!-- Main Content -->
             <div class="main-content">
@@ -536,18 +591,35 @@
         </div>
     </div>
     <!-- General JS Scripts -->
-    <script src="https://microaitec.pt/assets/js/app.min.js"></script>
-    <!-- JS Libraies -->
-    <script src="https://microaitec.pt/assets/bundles/apexcharts/apexcharts.min.js"></script>
-    <!-- Page Specific JS File -->
-    <script src="https://microaitec.pt/assets/js/page/index.js"></script>
-    <!-- Template JS File -->
-    <script src="https://microaitec.pt/assets/js/scripts.js"></script>
-    <!-- Custom JS File -->
-    <script src="https://microaitec.pt/assets/js/custom.js"></script>
-    <script>
-        jQuery("body").addClass("bg-white");
-    </script>
+
+    <% if(env=='PRODUT'){ %>
+        <!-- General JS Scripts -->
+        <script src="https://microaitec.pt/assets/js/app.min.js"></script>
+        <!-- JS Libraies -->
+        <script src="https://microaitec.pt/assets/bundles/apexcharts/apexcharts.min.js"></script>
+        <!-- Page Specific JS File -->
+        <script src="https://microaitec.pt/assets/js/page/index.js"></script>
+        <!-- Template JS File -->
+        <script src="https://microaitec.pt/assets/js/scripts.js"></script>
+        <!-- Custom JS File -->
+        <script src="https://microaitec.pt/assets/js/custom.js"></script>
+
+        <% } else{ %>
+
+            <script src="/assets/js/app.min.js"></script>
+            <!-- JS Libraies -->
+            <script src="/assets/bundles/apexcharts/apexcharts.min.js"></script>
+            <!-- Page Specific JS File -->
+            <script src="/assets/js/page/index.js"></script>
+            <!-- Template JS File -->
+            <script src="/assets/js/scripts.js"></script>
+            <!-- Custom JS File -->
+            <script src="/assets/js/custom.js"></script>
+            <% } %>
+
+                <script>
+                    jQuery("body").addClass("bg-white");
+                </script>
 </body>
 
 

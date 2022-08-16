@@ -10,7 +10,16 @@ router.get("/", async(ctx) => {
 
     try {
 
-        await ctx.redirect('/auth/login')
+        console.log(process.env.APP_ENV)
+
+        if (process.env.APP_ENV == 'PRODUT') {
+
+            await ctx.redirect('https://auth.microaitec.pt/login')
+        } else {
+
+            await ctx.redirect('/auth/login')
+        }
+
     } catch (err) {
         ctx.body = err;
     }
@@ -20,7 +29,7 @@ router.get("/", async(ctx) => {
 router.get("/login", async(ctx) => {
     try {
         const data = await strapi.plugin('app').service('site').index();
-        await ctx.render('auth/index', { data });
+        await ctx.render('auth/index', { data, env: process.env.APP_ENV });
     } catch (err) {
         ctx.body = err;
     }
