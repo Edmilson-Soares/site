@@ -26,5 +26,23 @@
 }
 
 .micro-cor {
-    color: #ED7D31;
+    color: #ED7D31 !important;
+}
+
+.bg-micro-cor {
+    background-color: #ED7D31 !important;
+}
+
+.micro-cor1 {
+    color: #170B64 !important;
+}
+
+.bg-micro-cor1 {
+    background-color: #170B64 !important;
+}
+
+.micro-footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

@@ -36,6 +36,27 @@ router.get("/login", async(ctx) => {
 });
 
 
+router.get("/register", async(ctx) => {
+    try {
+        const data = await strapi.plugin('app').service('site').index();
+        await ctx.render('auth/register', { data, env: process.env.APP_ENV });
+    } catch (err) {
+        ctx.body = err;
+    }
+});
+
+
+router.get("/forgot-password", async(ctx) => {
+    try {
+        const data = await strapi.plugin('app').service('site').index();
+        await ctx.render('auth/forgot', { data, env: process.env.APP_ENV });
+    } catch (err) {
+        ctx.body = err;
+    }
+});
+
+
+
 
 
 

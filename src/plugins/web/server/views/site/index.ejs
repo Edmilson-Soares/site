@@ -117,16 +117,27 @@
                                         text-justify: inter-word;">
                                             Perspectiva estabelecer combinação entre o software e hardware para gerar soluções que auxiliem as pessoas executar as suas taferas de forma rápida e eficiente, promovendo o conforto aos clientes e satisfação nas suas acções.
                                         </p>
-                                        <div class="btn-box" style="border-radius: 20px;">
-                                            <a href="/auth/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
+                                        <% if(env=='PRODUT'){ %>
+                                            <!-- General JS Scripts -->
+                                            <div class="btn-box" style="border-radius: 20px;">
+                                                <a href="https://auth.microaitec.pt/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
                                               Tornar Cliente
                                             </a>
-                                        </div>
+                                            </div>
+                                            <% } else{ %>
+                                                <!-- General JS Scripts -->
+                                                <div class="btn-box" style="border-radius: 20px;">
+                                                    <a href="/auth/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
+                                                  Tornar Cliente
+                                                </a>
+                                                </div>
+                                                <% } %>
+
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="images/microaitec_dark.png" alt="">
+                                        <img src="/images/microaitec_dark.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -143,11 +154,21 @@
                                         <p>
                                             Desenvolver e levar as novas tecnologias de forma qualificada para sociedade santomense. Melhorar as vidas das pessoas usando a tecnologia
                                         </p>
-                                        <div class="btn-box" style="border-radius: 20px;">
-                                            <a href="/auth/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
-                                              Tornar Cliente
-                                            </a>
-                                        </div>
+                                        <% if(env=='PRODUT'){ %>
+                                            <!-- General JS Scripts -->
+                                            <div class="btn-box" style="border-radius: 20px;">
+                                                <a href="https://auth.microaitec.pt/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
+                                            Tornar Cliente
+                                          </a>
+                                            </div>
+                                            <% } else{ %>
+                                                <!-- General JS Scripts -->
+                                                <div class="btn-box" style="border-radius: 20px;">
+                                                    <a href="/auth/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
+                                                Tornar Cliente
+                                              </a>
+                                                </div>
+                                                <% } %>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -179,11 +200,21 @@
                                             <h1 style="font-size: 22px;color:#5362EC;">AVANÇO NA INOVAÇÃO TECNOLÓGICA</h1>
                                             <h1 style="font-size: 16px;">Desenvolvimento de Software e do Hardware</h1>
                                         </p>
-                                        <div class="btn-box" style="border-radius: 20px;">
-                                            <a href="/auth/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
-                                              Tornar Cliente
-                                            </a>
-                                        </div>
+                                        <% if(env=='PRODUT'){ %>
+                                            <!-- General JS Scripts -->
+                                            <div class="btn-box" style="border-radius: 20px;">
+                                                <a href="https://auth.microaitec.pt/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
+                                            Tornar Cliente
+                                          </a>
+                                            </div>
+                                            <% } else{ %>
+                                                <!-- General JS Scripts -->
+                                                <div class="btn-box" style="border-radius: 20px;">
+                                                    <a href="/auth/register" class="btn1" style="border-radius: 20px;background: #5362EC;text-decoration: none;">
+                                                Tornar Cliente
+                                              </a>
+                                                </div>
+                                                <% } %>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -226,7 +257,8 @@
 
                             <div class="card micro-card">
 
-                                <a href="<%= '/servicos/'+area.id %>" style="text-decoration: none;">
+
+                                <a href="<%= area.nome=='Marketing Digital (MD)'?'https://djinola.com/':'/servicos/'+area.id %>" style="text-decoration: none;">
                                     <div class="card-statistic-3">
                                         <div class="card-icon card-icon-large"><i class="<%= 'fa '+area.icon %> "></i></div>
                                         <div class="card-content">
@@ -437,7 +469,7 @@
 
     <!-- info section -->
 
-    <section class="info_section layout_padding2">
+    <section class="info_section layout_padding2 ">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-3 info_col">

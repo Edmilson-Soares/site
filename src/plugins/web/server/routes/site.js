@@ -11,7 +11,7 @@ router.get("/", async(ctx) => {
 
         console.log('ddd')
         const data = await strapi.plugin('app').service('site').index();
-        await ctx.render('site/index', { data });
+        await ctx.render('site/index', { data, env: process.env.APP_ENV });
     } catch (err) {
         ctx.body = err;
     }

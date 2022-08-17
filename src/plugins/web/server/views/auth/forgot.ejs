@@ -1,151 +1,213 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="/assets/" data-template="vertical-menu-template-free">
+
+<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>MicroAITec</title>
 
-    <meta name="description" content="" />
+    <% if(env=='PRODUT'){ %>
+        <!-- General JS Scripts -->
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+        <title>Auth - Sistema</title>
+        <!-- General CSS Files -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/app.min.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/bundles/izitoast/css/iziToast.min.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/style.css">
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/components.css">
+        <!-- Custom style CSS -->
+        <link rel="stylesheet" href="https://microaitec.pt/assets/css/custom.css">
+        <link rel="stylesheet" type="text/css" href="https://microaitec.pt/css/micro.css" />
+        <link rel='shortcut icon' type='image/x-icon' href='https://microaitec.pt/assets/img/favicon.ico' />
+        <% } else{ %>
+            <meta charset="UTF-8">
+            <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+            <title>Otika - Admin Dashboard Template</title>
+            <!-- General CSS Files -->
+            <link rel="stylesheet" href="/assets/css/app.min.css">
+            <link rel="stylesheet" href="/assets/bundles/bootstrap-social/bootstrap-social.css">
+            <link rel="stylesheet" href="/assets/bundles/izitoast/css/iziToast.min.css">
+            <!-- Template CSS -->
+            <link rel="stylesheet" href="/assets/css/style.css">
+            <link rel="stylesheet" href="/assets/css/components.css">
+            <!-- Custom style CSS -->
+            <link rel="stylesheet" href="/assets/css/custom.css">
+            <link rel="stylesheet" type="text/css" href="/css/micro.css" />
+            <link rel='shortcut icon' type='image/x-icon' href='/assets/img/favicon.ico' />
+            <% } %>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-
-    <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="/assets/vendor/fonts/boxicons.css" />
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="/assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="/assets/css/demo.css" />
-
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
-    <!-- Page CSS -->
-    <!-- Page -->
-    <link rel="stylesheet" href="/assets/vendor/css/pages/page-auth.css" />
-    <!-- Helpers -->
-    <script src="/assets/vendor/js/helpers.js"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="/assets/js/config.js"></script>
 </head>
 
-<body>
-    <!-- Content -->
+<body style="background-color: #170B64;">
 
-    <div id="app" class="container-xxl">
-        <div class="authentication-wrapper authentication-basic container-p-y">
-            <div class="authentication-inner py-4">
-                <!-- Forgot Password -->
-                <div class="card">
-                    <div class="card-body">
-                        <!-- Logo -->
-                        <div class="app-brand justify-content-center">
-                            <a href="/" class="app-brand-link gap-2">
-                                <img style="width:40px ;height: 40px;border-radius: 50%;" src="/images/logo_microaitec.jpeg">
-                                <span class="app-brand-text demo text-body fw-bolder">MicroAITec</span>
-                            </a>
-                        </div>
-                        <!-- /Logo -->
-                        <h4 class="mb-2">Forgot Password? 🔒</h4>
-                        <p class="mb-4">Enter your email and we'll send you instructions to reset your password</p>
-                        <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="text" v-model="email" class="form-control" id="email" name="email" placeholder="Enter your email" autofocus />
+    <div id="app">
+        <section class="section">
+            <div class="container mt-5">
+
+                <div class="row mt-5">
+                    <div class="mt-5 col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+
+
+                        <div class="card bg-micro-cor1 mt-5">
+
+                            <div class="card-header d-flex justify-content-between">
+
+
+                                <% if(env=='PRODUT'){ %>
+                                    <!-- General JS Scripts -->
+                                    <a href="https://microaitec.pt/">
+                                        <img src="https://microaitec.pt/images/microaitec.png" style="width: 80px;" alt="Logon de Microaitec">
+                                    </a>
+
+                                    <% } else{ %>
+                                        <!-- General JS Scripts -->
+                                        <a href="/">
+                                            <img src="/images/microaitec.png" style="width: 80px;" alt="Logon de Microaitec">
+                                        </a>
+
+
+                                        <% } %>
+
+
+
+                                            <h4 class="micro-sub_titulo">Sistema Gestão</h4>
+
                             </div>
-                            <button @click="forgot($event)" class="btn btn-primary d-grid w-100">Send Reset Link</button>
-                        </form>
-                        <div class="text-center">
-                            <a href="/auth/login" class="d-flex align-items-center justify-content-center">
-                                <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i> Back to login
-                            </a>
+                            <div class="card-body">
+                                <form method="POST" action="#" class="needs-validation" novalidate="">
+                                    <div class="form-group">
+                                        <label for="nif">NIF</label>
+                                        <input id="nif" type="text" class="form-control" name="nif" tabindex="1" required autofocus>
+                                        <div class="invalid-feedback">
+                                            Preenche o seu nif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button @click="login($event)" class="btn btn-primary btn-lg btn-block micro-card" tabindex="4">
+                                          -Enviar-
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
+
+                        <% if(env=='PRODUT'){ %>
+
+                            <div class="mt-5 text-muted text-center">
+                                Don't have an account? <a href="https://auth.microaitec.pt/login">Login</a>
+                            </div>
+
+                            <% } else{ %>
+                                <div class="mt-5 text-muted text-center">
+                                    Don't have an account? <a href="/auth/login">Login</a>
+                                </div>
+
+                                <% } %>
+
                     </div>
                 </div>
-                <!-- /Forgot Password -->
             </div>
-        </div>
+        </section>
     </div>
 
-    <!-- / Content -->
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="/assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="/assets/vendor/libs/popper/popper.js"></script>
-    <script src="/assets/vendor/js/bootstrap.js"></script>
-    <script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-    <script src="/assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
-    <script src="/assets/js/vue.js"></script>
-    <!--<script src="https://unpkg.com/vue@3"></script>-->
-    <script src="/assets/js/axios.js"></script>
-
-    <!-- Main JS -->
-    <script src="/assets/js/main.js"></script>
-
-    <script>
-        Vue.createApp({
-            data() {
-                return {
-                    email: ''
-                }
-            },
-            methods: {
-                forgot(event) {
-                    event.preventDefault();
-                    axios
-                        .post('/auth/forgot_password', {
-                            email: this.email,
-                        })
-                        .then(({
-                            data
-                        }) => {
+    <% if(env=='PRODUT'){ %>
+        <!-- General JS Scripts -->
+        <script src="https://microaitec.pt/assets/js/app.min.js"></script>
+        <!-- JS Libraies -->
+        <!-- Page Specific JS File -->
+        <!-- Template JS File -->
+        <script src="https://microaitec.pt/assets/js/scripts.js"></script>
+        <!-- Custom JS File -->
+        <script src="https://microaitec.pt/assets/js/custom.js"></script>
+        <script src="https://microaitec.pt/assets/bundles/izitoast/js/iziToast.min.js"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+        <% } else{ %>
+            <!-- General JS Scripts -->
+            <script src="/assets/js/app.min.js"></script>
+            <!-- JS Libraies -->
+            <!-- Page Specific JS File -->
+            <!-- Template JS File -->
+            <script src="/assets/js/scripts.js"></script>
+            <!-- Custom JS File -->
+            <script src="/assets/js/custom.js"></script>
+            <script src="/assets/bundles/izitoast/js/iziToast.min.js"></script>
+            <script src="https://unpkg.com/vue@3"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+            <% } %>
 
 
-                            console.log(data)
-                            window.location.href = "/auth/forgot_password_send"
-                        })
-                        .catch(error => {
-                            // Handle error.
-                            //err1.innerHTML=""
-                            //window.location.href="/auth/login"
-                            console.log('An error occurred:', error.response);
 
-                            if (error.response.status == '400') {
-                                let err = "As Credências Incorretas"
-                                let conteiner = `
+                <script>
+                    let env = '<%= env%>'
+
+
+                    Vue.createApp({
+                        data() {
+                            return {
+                                identifier: '',
+                                password: ""
+                            }
+                        },
+                        methods: {
+                            login(event) {
+                                event.preventDefault();
+                                axios
+                                    .post('/auth/login', {
+                                        identifier: this.identifier,
+                                        password: this.password,
+                                    })
+                                    .then(({
+                                        data
+                                    }) => {
+                                        localStorage.setItem('Microaitec-jwt', data.jwt)
+
+                                        console.log(data)
+                                        if (data.role == 1) {
+                                            window.location.href = "/dashboard"
+                                        } else if (data.role == 3) {
+                                            window.location.href = "/dashboard"
+                                        } else {
+                                            window.location.href = "/dashboard"
+                                        }
+
+                                    })
+                                    .catch(error => {
+                                        // Handle error.
+                                        //err1.innerHTML=""
+                                        //window.location.href="/auth/login"
+                                        console.log('An error occurred:', error.response.data.error.message);
+
+
+                                        let err = error.response.data.error.message
+                                        let conteiner = `
                                 <div class="alert-body" >
                                   ${err}
                                 </div>
 
-                                `
+                               `;
 
-                                iziToast.error({
-                                    title: 'MicroAITec!',
-                                    message: conteiner,
-                                    position: 'topRight'
-                                });
+                                        iziToast.error({
+                                            title: 'MicroAITec!',
+                                            message: conteiner,
+                                            position: 'topCenter'
+                                        });
 
+
+                                    });
                             }
-                        });
-                }
-            },
-        }).mount('#app');
-    </script>
-
+                        },
+                    }).mount('#app');
+                </script>
 </body>
+
+
+<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 
 </html>
